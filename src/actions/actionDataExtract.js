@@ -26,7 +26,8 @@ const getTrnSalesFailure = (error) => {
 export const getTrnSales = () => {
   return (dispatch) => {
     dispatch(getTrnSalesRequest())
-    return axios.get(`http://localhost:8080/det/trnsales`)
+    // return axios.get(`http://localhost:8080/det/trnsales`)
+    return axios.get(`http://localhost:3000/det/trnsales.json`)
       .then(res =>
         dispatch(getTrnSalesSuccess(res.data))
       ).catch(err =>

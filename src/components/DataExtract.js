@@ -1,8 +1,10 @@
 // components/DataExtract.js
 import React, { Component } from 'react';
+/*
 import {
   RaisedButton
 } from 'material-ui';
+*/
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import assign from 'object-assign';
@@ -23,16 +25,19 @@ class DataExtract extends Component {
     this.props.actions.getTrnSales();
     console.log(this.props);
 
-        ★★★
+    /*    ★★★
         this.props.actions.getTrnSales() を実行することによって、
         セットされたthis.props.stateのデータをここで使用したい場合には、
         どうすれば良いでしょうか？？？
-  ★★★
+  ★★★ */
 
+    event.preventDefault();
   };
+
   render() {
     return (
       <div style={{ display: "inline-block", verticalAlign: "top", marginTop: "5px" }}>
+        {/*
         <RaisedButton
           label="検索"
           backgroundColor="#2962FF"
@@ -41,7 +46,8 @@ class DataExtract extends Component {
           icon={<CachedIcon color={"#fff"} style={{ marginLeft: "0px" }} />}
           labelPosition="after"
           onClick={this.onBtnSearchClick}
-        />
+        />*/}
+        <a href="" onClick={this.onBtnSearchClick}>ここをクリック</a>
       </div>
     );
   }
