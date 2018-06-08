@@ -3,12 +3,12 @@ import assign from 'object-assign';
 
 import * as actionTypes from '../constants/actionTypes';
 
-const initalState = {
+const initialState = {
   isFetching: false,
   items: []
 };
 
-const reducerDataExtract = (state = [initalState], action) => {
+const reducerDataExtract = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.GET_TRNSALES_REQUEST:
       return assign({}, state, {

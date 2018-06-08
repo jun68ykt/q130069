@@ -48,6 +48,11 @@ class DataExtract extends Component {
           onClick={this.onBtnSearchClick}
         />*/}
         <a href="" onClick={this.onBtnSearchClick}>ここをクリック</a>
+
+        <br />
+        <ul>
+          {this.props.state.items.map(item => <li key={item.id}>{item.name}</li>)}
+        </ul>
       </div>
     );
   }
